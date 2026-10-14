@@ -97,10 +97,15 @@ function buildPresetPicker() {
   itemField.replaceWith(sel);
   const label = sel.closest('.field')?.querySelector('label');
   if (label) label.textContent = 'Pick an example item';
-  // disable manual inputs that won't change the pre-computed result
+  // In the hosted preview we can only replay pre-computed results, so lock the manual
+  // inputs and label them clearly as preview-only (they stay fully live in `python run.py`).
   ['category_id', 'material_id', 'size_score', 'make_hours', 'condition_score',
    'seller_rating', 'photo_count', 'season_id', 'is_personalized', 'shipping_cost'].forEach((id) => {
-    const el = document.getElementById(id); if (el) el.disabled = true;
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.disabled = true;
+    el.title = 'Preview only — run PricePilot locally (python run.py) to price any item';
+    el.closest('.field')?.classList.add('locked');
   });
 }
 function fill(id, items, def) {
