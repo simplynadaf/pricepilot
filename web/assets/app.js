@@ -104,9 +104,28 @@ function buildPresetPicker() {
     const el = document.getElementById(id);
     if (!el) return;
     el.disabled = true;
-    el.title = 'Preview only — run PricePilot locally (python run.py) to price any item';
+    el.title = 'Preview only. Run PricePilot locally (python run.py) to price any item.';
     el.closest('.field')?.classList.add('locked');
   });
+
+  // Reflect the chosen example's REAL inputs into the (locked) fields so the preview
+  // shows the actual item behind each baked result, not a static default.
+  const applyPreset = (key) => {
+    const d = STATIC.results[key];
+    if (!d || !d.inputs) return;
+    const inp = d.inputs;
+    ['category_id', 'material_id', 'size_score', 'make_hours', 'condition_score',
+     'seller_rating', 'photo_count', 'season_id', 'is_personalized', 'shipping_cost'].forEach((id) => {
+      const el = document.getElementById(id);
+      if (el && inp[id] !== undefined) el.value = inp[id];
+    });
+    ['size_score', 'condition_score'].forEach((id) => {
+      const out = document.getElementById(id + '_v');
+      if (out) out.textContent = document.getElementById(id).value;
+    });
+  };
+  sel.addEventListener('change', (e) => applyPreset(e.target.value));
+  applyPreset(sel.value); // fill for the first example on load
 }
 function fill(id, items, def) {
   const sel = document.getElementById(id);
