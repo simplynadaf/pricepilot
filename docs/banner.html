@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{width:1200px;height:630px;overflow:hidden;font-family:Inter,sans-serif;color:#eef4ef;
+    background:
+      radial-gradient(900px 500px at 22% -10%, rgba(74,222,138,.16), transparent 60%),
+      radial-gradient(800px 520px at 92% 115%, rgba(232,196,104,.12), transparent 60%),
+      radial-gradient(100% 100% at 50% 50%, #0a0f0c, #05080b 72%);
+    position:relative;}
+  .vign{position:absolute;inset:0;box-shadow:inset 0 0 260px 50px rgba(0,0,0,.55);}
+  .wrap{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:center;padding:0 76px;}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:15px;letter-spacing:.2em;text-transform:uppercase;
+    color:#4ade8a;border:1px solid rgba(74,222,138,.2);padding:9px 18px;border-radius:999px;background:rgba(12,18,14,.5);width:fit-content;font-weight:500;}
+  .dot{width:8px;height:8px;border-radius:50%;background:#e8c468;box-shadow:0 0 14px #e8c468;}
+  h1{font-family:Fraunces,serif;font-weight:600;font-size:94px;line-height:.98;letter-spacing:-.03em;margin:30px 0 0;}
+  h1 .g{font-style:italic;background:linear-gradient(100deg,#86efac,#e8c468);-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .sub{margin-top:26px;font-size:25px;line-height:1.5;color:#9fb3a7;max-width:30ch;}
+  .chips{margin-top:38px;display:flex;gap:14px;}
+  .chip{display:inline-flex;align-items:center;gap:9px;font-size:16px;color:#eef4ef;border:1px solid rgba(74,222,138,.18);
+    border-radius:999px;padding:10px 18px;background:rgba(12,18,14,.5);}
+  .chip .c{width:8px;height:8px;border-radius:50%;}
+  .c.green{background:#4ade8a;box-shadow:0 0 10px #4ade8a}
+  .c.gold{background:#e8c468;box-shadow:0 0 10px #e8c468}
+  .brand{position:absolute;top:56px;right:76px;z-index:3;font-family:Fraunces,serif;font-size:34px;font-weight:600;}
+  .brand .mk{background:linear-gradient(100deg,#86efac,#e8c468);-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .tag{position:absolute;bottom:50px;right:76px;z-index:3;font-size:16px;color:#5a6a62;letter-spacing:.04em;}
+  .price{position:absolute;right:90px;top:50%;transform:translateY(-50%);z-index:2;font-family:Fraunces,serif;
+    font-size:150px;font-weight:600;line-height:1;background:linear-gradient(100deg,#86efac,#e8c468);
+    -webkit-background-clip:text;background-clip:text;color:transparent;opacity:.9;}
+  .price small{display:block;font-size:22px;color:#7f9088;-webkit-text-fill-color:#7f9088;font-family:Inter;letter-spacing:.02em;margin-top:10px;text-align:right;}
+</style>
+</head>
+<body>
+  <div class="vign"></div>
+  <div class="brand">Price<span class="mk">Pilot</span></div>
+  <div class="price">$43<small>likely $39–$48 · ±$2.96</small></div>
+  <div class="wrap">
+    <div class="eyebrow"><span class="dot"></span> Open-weight AI · runs on your laptop</div>
+    <h1>Price it right,<br/><span class="g">then watch it sell.</span></h1>
+    <div class="sub">A local pricing copilot for marketplace sellers. Your sales data never leaves your machine.</div>
+    <div class="chips">
+      <span class="chip"><span class="c green"></span> TabPFN-v2 · predicts the price</span>
+      <span class="chip"><span class="c gold"></span> Gemma 3 · writes the listing</span>
+    </div>
+  </div>
+  <div class="tag">Hacktoberfest 2026 · Week 2: Side Hustle</div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+# PricePilot dependencies (CPU-only; no GPU required).
+# For CPU-only PyTorch install first:
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+tabpfn>=2.0
+fastapi>=0.110
+uvicorn[standard]>=0.29
+pandas>=2.0
+numpy>=1.24
