@@ -43,7 +43,12 @@ most directly decides whether the hustle makes money.
 
 ## Demo
 
-> 🎥 *[demo video / deployed link here]*
+**🔗 Live preview:** [simplynadaf.github.io/pricepilot](https://simplynadaf.github.io/pricepilot/)
+
+> The hosted preview is a static site (GitHub Pages) that serves **real, pre-computed**
+> TabPFN-v2 + Gemma results for a handful of example items, so you can click through actual
+> model output. The live models themselves run on *your* machine — clone the repo and
+> `python run.py` to price any item, fully offline. That is the whole point of PricePilot.
 
 Describe an item the way you'd list it — category, materials, size, hours to make, condition,
 photos, season — and PricePilot prices it and drafts the listing in one shot, running the two

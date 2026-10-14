@@ -11,13 +11,13 @@
 
 <br/>
 
-<img src="docs/banner.png" alt="PricePilot — a local pricing copilot for marketplace sellers, powered by TabPFN-v2 and Gemma 3" width="100%"/>
+<img src="docs/banner.png" alt="PricePilot, a local pricing copilot for marketplace sellers, powered by TabPFN-v2 and Gemma 3" width="100%"/>
 
 <br/>
 
 **Most Etsy and eBay sellers price by gut, and get it wrong.**<br/>
 **Too high, it sits. Too low, you work for free.**<br/>
-I built an open-weight model that prices it from data — on your own laptop.
+I built an open-weight model that prices it from data, on your own laptop.
 
 <br/>
 
@@ -43,9 +43,9 @@ I built an open-weight model that prices it from data — on your own laptop.
 
 | Output | What You Get |
 |--------|-------------|
-| 🎯 **A price you can defend** | A predicted sell price **with an honest 10–90% range** — the risk, not a false-precise single number — plus a **measured error** so you know how much to trust it. |
-| 🔼 **The levers that raise it** | A what-if loop that tells you *what to change and by how much*: "add photos **+$2**", "offer personalization **+$5**", "list in Q4 **+$8**", "premium materials **+$12**" — ranked by dollar impact. |
-| ✍️ **A listing, written for you** | A local Gemma model turns the item and that exact price into a **title, description, and 8 search tags** — grounded on the number, never inventing one. |
+| 🎯 **A price you can defend** | A predicted sell price **with an honest 10–90% range** (the risk, not a false-precise single number), plus a **measured error** so you know how much to trust it. |
+| 🔼 **The levers that raise it** | A what-if loop that tells you *what to change and by how much*: "add photos **+$2**", "offer personalization **+$5**", "list in Q4 **+$8**", "premium materials **+$12**", ranked by dollar impact. |
+| ✍️ **A listing, written for you** | A local Gemma model turns the item and that exact price into a **title, description, and 8 search tags**, grounded on the number, never inventing one. |
 
 ---
 
@@ -69,7 +69,7 @@ I built an open-weight model that prices it from data — on your own laptop.
 | The #1 thing handmade sellers get wrong | Pricing |
 | What closed pricing SaaS costs | $10–30 / month, recurring |
 | What those tools want in return | Your entire sales history, on their server |
-| A seller's actual edge | Their margins + what sells — exactly what they'd be uploading |
+| A seller's actual edge | Their margins + what sells, exactly what they'd be uploading |
 | What PricePilot costs to run | $0, on the laptop they already own |
 
 ---
@@ -165,7 +165,7 @@ python scripts/validate.py        # end-to-end: API + TabPFN + Gemma + offline f
 | **Fallback** | Deterministic rule | Writes a correct listing from the same price if Ollama is unreachable. |
 
 On the sample data, TabPFN predicts held-out sold prices with a **mean absolute error of
-about $2.90** on items averaging ~$54 — roughly 5% error, with zero training time.
+about $2.90** on items averaging ~$54, roughly 5% error, with zero training time.
 
 ---
 
@@ -184,11 +184,11 @@ A closed, hosted model would have made this project *worse* in every way that ma
 
 ## 🏆 Built For
 
-**[Hacktoberfest Open-Source AI Challenge — Week 2: Side Hustle](https://dev.to/challenges/hacktoberfest-week2-2026-10-12)**
+**[Hacktoberfest Open-Source AI Challenge, Week 2: Side Hustle](https://dev.to/challenges/hacktoberfest-week2-2026-10-12)**
 
 | Category | How |
 |----------|-----|
-| **Best Use of TabPFN** | TabPFN-v2 is the core: it predicts the price, provides the calibrated range, and is wrapped in a what-if **prediction agent** that re-queries the model to explain which levers move the number. Accuracy is reported as a held-out MAE (~$2.90) — measured, not asserted. |
+| **Best Use of TabPFN** | TabPFN-v2 is the core: it predicts the price, provides the calibrated range, and is wrapped in a what-if **prediction agent** that re-queries the model to explain which levers move the number. Accuracy is reported as a held-out MAE (~$2.90), measured, not asserted. |
 
 ---
 
@@ -221,10 +221,10 @@ pricepilot/
 
 ## 🧾 The Honest Take
 
-- **A predicted price is a forecast, not a promise.** The 10–90% range exists for a reason — demand, timing, and luck still move the real sale.
-- **The sample dataset is grounded but synthetic.** 900 listings generated from realistic price drivers so the relationships are real and learnable, but it is a teaching dataset. **Swap in your own exported sales CSV** to make it yours — that is the whole point.
+- **A predicted price is a forecast, not a promise.** The 10–90% range exists for a reason: demand, timing, and luck still move the real sale.
+- **The sample dataset is grounded but synthetic.** 900 listings generated from realistic price drivers so the relationships are real and learnable, but it is a teaching dataset. **Swap in your own exported sales CSV** to make it yours; that is the whole point.
 - **The language model only writes copy.** No price comes from Gemma; the number is TabPFN's.
-- **CPU, so it is unhurried.** A full price-plus-listing takes ~20–30s on a laptop CPU. That is the cost of running everything locally instead of in someone's data center — worth it to keep your sales data on your own machine.
+- **CPU, so it is unhurried.** A full price-plus-listing takes ~20–30s on a laptop CPU. That is the cost of running everything locally instead of in someone's data center, worth it to keep your sales data on your own machine.
 
 ---
 
@@ -232,9 +232,9 @@ pricepilot/
 
 PricePilot reuses an architecture pattern I built for my Week 1 entry, **FrostWise**
 (TabPFN-v2 for prediction, a local Gemma model for the language layer, FastAPI, a no-build
-front end, and a deterministic offline fallback). **PricePilot is a new project** — new
+front end, and a deterministic offline fallback). **PricePilot is a new project**: new
 repository, new domain, new dataset, new prediction target, and a new what-if prediction-agent
-loop — built within the Week 2 window. Lineage noted per the challenge's "credit prior work" rule.
+loop, built within the Week 2 window. Lineage noted per the challenge's "credit prior work" rule.
 
 Model weights are licensed by their authors: TabPFN-v2 under the Prior Labs License, Gemma under the Gemma Terms of Use.
 
@@ -242,7 +242,7 @@ Model weights are licensed by their authors: TabPFN-v2 under the Prior Labs Lice
 
 ## 👤 Author
 
-**Sarvar Nadaf** — Cloud Architect | Cloud, AI Infrastructure & DevOps
+**Sarvar Nadaf** | Cloud Architect | Cloud, AI Infrastructure & DevOps
 
 | Platform | Link |
 |----------|------|
@@ -255,7 +255,7 @@ Model weights are licensed by their authors: TabPFN-v2 under the Prior Labs Lice
 
 ## 📄 License
 
-MIT — see [LICENSE](LICENSE).
+MIT. See [LICENSE](LICENSE).
 
 ---
 

@@ -1,5 +1,5 @@
 // PricePilot 3D background: a drifting particle field in deep green that warms toward
-// gold as you scroll — the "it turns into money" motif. Three.js via CDN, GPU-cheap
+// gold as you scroll (the "it turns into money" motif). Three.js via CDN, GPU-cheap
 // (points + shader colors), honours prefers-reduced-motion.
 import * as THREE from 'three';
 

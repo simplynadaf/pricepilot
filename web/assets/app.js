@@ -83,7 +83,7 @@ function addMaeBadge(mae) {
 function showStaticNote() {
   const note = document.createElement('div');
   note.style.cssText = 'margin-bottom:18px;font-size:12.5px;color:var(--muted);border:1px dashed var(--line);border-radius:10px;padding:10px 14px;background:rgba(74,222,138,.04)';
-  note.innerHTML = 'Hosted preview: these are <b style="color:#86efac">real pre-computed</b> TabPFN-v2 + Gemma results for the example items below. The live models run on <b>your</b> machine — clone the repo and <code>python run.py</code> to price any item, fully offline.';
+  note.innerHTML = 'Hosted preview: these are <b style="color:#86efac">real pre-computed</b> TabPFN-v2 + Gemma results for the example items below. The live models run on <b>your</b> machine: clone the repo and <code>python run.py</code> to price any item, fully offline.';
   const panel = document.querySelector('#price .panel');
   if (panel) panel.insertBefore(note, panel.firstChild);
 }
