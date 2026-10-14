@@ -32,7 +32,7 @@ def _rule_based(item: str, category: str, pricing) -> dict:
     """Deterministic fallback listing — correct and useful with no model."""
     # Avoid duplicating a word that's already in the item/category (e.g. "handmade").
     cat = category.title()
-    title = f"{item.title()} — {cat}"
+    title = f"{item.title()} · {cat}"
     if "handmade" not in title.lower() and "handmade" not in cat.lower():
         title = f"Handmade {title}"
     title = title[:80]

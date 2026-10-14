@@ -27,6 +27,18 @@ I built an open-weight model that prices it from data, on your own laptop.
 
 ---
 
+## 🎬 Demo
+
+<div align="center">
+
+https://github.com/user-attachments/assets/pricepilot-demo
+
+*Three real seller use cases (pendant, candle, leather wallet). Every input changes the price, because the model is predicting, not looking up a table. [Watch the full walkthrough →](https://simplynadaf.github.io/pricepilot/)*
+
+</div>
+
+---
+
 ## 🎬 See It Work
 
 <div align="center">

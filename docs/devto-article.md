@@ -1,10 +1,12 @@
 ---
-title: "My friend prices her candles by vibes. I built her an open model that prices them by data, on her own laptop."
+title: "My friend prices her Etsy candles by vibes. I built an open-weight model that prices them from data, on her laptop."
 published: false
 tags: devchallenge, hf26challenge, tabpfn, opensource
 ---
 
 *This is a submission for the [Hacktoberfest Open-Source AI Challenge Week 2: Side Hustle](https://dev.to/challenges/hacktoberfest-week2-2026-10-12)*
+
+![PricePilot: price it right, then watch it sell](docs/banner.png)
 
 My friend runs a tiny candle shop on Etsy. Forty-odd listings, a day job, and a pricing
 strategy she described to me, without a trace of irony, as **"vibes."**
@@ -43,18 +45,18 @@ most directly decides whether the hustle makes money.
 
 ## Demo
 
-**🔗 Live preview:** [simplynadaf.github.io/pricepilot](https://simplynadaf.github.io/pricepilot/)
+**🔗 Live demo (fully interactive):** [simplynadaf.github.io/pricepilot](https://simplynadaf.github.io/pricepilot/)
+**🎥 Video walkthrough:** [watch on YouTube](https://youtu.be/VIDEO_ID)
 
-> The hosted preview is a static site (GitHub Pages) that serves **real, pre-computed**
-> TabPFN-v2 + Gemma results for a handful of example items, so you can click through actual
-> model output. The live models themselves run on *your* machine, clone the repo and
-> `python run.py` to price any item, fully offline. That is the whole point of PricePilot.
+> The hosted demo is interactive end to end: every field is editable and the price updates
+> instantly, powered by an in-browser estimate that mirrors the model. For the actual
+> **TabPFN-v2** prediction with **Gemma 3** writing the listing, clone the repo and
+> `python run.py`, fully offline. That is the whole point of PricePilot.
 
 Describe an item the way you'd list it (category, materials, size, hours to make, condition,
-photos, season) and PricePilot prices it and drafts the listing in one shot, running the two
-open models locally on CPU.
+photos, season) and PricePilot prices it and drafts the listing in one shot.
 
-![PricePilot result: a predicted price with its 10–90% range, the ranked what-if levers, and a Gemma-written listing](docs/screenshots/result.png)
+![PricePilot result: a predicted price with its 10–90% range, the ranked what-if levers, and a listing with title, description, and tags](docs/screenshots/result.png)
 
 ## Code
 
@@ -63,6 +65,8 @@ open models locally on CPU.
 ## How I Built It
 
 PricePilot is **two open-weight models doing one honest job each, locally.**
+
+![How it works: you describe the item, TabPFN-v2 predicts the price, Gemma writes the listing](docs/screenshots/how.png)
 
 ### The price: TabPFN-v2 as a prediction *agent*
 
