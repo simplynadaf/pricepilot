@@ -13,33 +13,34 @@ strategy she described to me, without a trace of irony, as **"vibes."**
 
 She is not wrong to struggle. There is no sticker price for a hand-poured soy candle. The
 right number depends on the scent, the size, the wax, how long it took, the season, how many
-photos she shot, how her shop is rated, a dozen little things that interact. Price it $4 too
+photos she shot, how her shop is rated. A dozen little things that interact. Price it $4 too
 high and it sits until the wax degrades. Price it $4 too low and she is paying Etsy fees to
 work for free. She has lost real money both ways.
 
 The tools that promise to fix this are closed SaaS products: a monthly fee, and an upload of
 her entire sales history to someone else's server so they can rent her a number back. For a
-shop that clears maybe $300 a month, that is a bad trade twice over, the cost, and handing
-the one thing that is actually hers (what sells, at what margin) to a stranger's cloud.
+shop that clears maybe $300 a month, that is a bad trade twice over. There is the cost. And
+there is handing the one thing that is actually hers (what sells, at what margin) to a
+stranger's cloud.
 
-So I built her **PricePilot**: a pricing copilot that runs entirely on her laptop, predicts
-what an item will sell for from sold-listings data, and writes the listing, with no account,
-no API bill, and nothing uploaded anywhere.
+So I built her **PricePilot**: a pricing copilot that runs entirely on her laptop. It predicts
+what an item will sell for from sold-listings data, then writes the listing. No account, no
+API bill, nothing uploaded anywhere.
 
 ## What I Built
 
 **PricePilot turns one short form into three things a seller can act on immediately:**
 
-1. **A price with an honest range.** Not a single false-precise number, a predicted sell
+1. **A price with an honest range.** Not a single false-precise number but a predicted sell
    price *and* the 10–90% band around it, plus a measured error so you know how much to trust
    it.
 2. **The levers that raise it.** It doesn't just score the listing; it tells her *what to
-   change and by how much*: "add photos **+$2**", "offer personalization **+$5**", "list in
-   the Q4 season **+$8**", "use premium wax **+$12**", ranked by dollar impact.
+   change and by how much*: "offer personalization, about +$5", "list in the Q4 season,
+   about +$8", "use premium wax, about +$12", ranked by dollar impact.
 3. **A ready-to-paste listing.** Title, description, and eight search tags, written to match
    the predicted price.
 
-**Who would pay for it:** independent Etsy / eBay / marketplace sellers, the exact "side
+**Who would pay for it:** independent Etsy, eBay, and marketplace sellers. The exact "side
 hustle" person this week is about. The thing it fixes (what do I charge?) is the thing that
 most directly decides whether the hustle makes money.
 
@@ -87,22 +88,25 @@ one-shot regressor, so that's what I built. PricePilot:
 - and reports a **held-out mean absolute error** so every number is measured, not asserted.
 
 On the sample dataset, TabPFN predicts held-out sold prices with an **MAE of about $2.90** on
-items averaging ~$54, roughly 5% error, with zero training time. That honesty number is the
-whole point: she can see how much to trust it.
+items averaging ~$54. That is roughly 5% error, with zero training time. The honesty number
+is the whole point: she can see how much to trust it.
 
 ```python
-# the prediction agent, in essence: predict, then re-query to explain the number
-mean, low, high = self._predict_one(feats)          # price + 10-90% range
-preds = self._predict_rows(whatif_rows)             # ONE batched pass for all levers
-levers = sorted(zip(labels, preds - mean), key=..., reverse=True)
+# the prediction agent, simplified: predict, then re-query to explain the number
+mean, low, high = self._predict_one(feats)             # price + 10-90% range
+preds = self._predict_rows(whatif_rows)                # ONE batched pass for every lever
+levers = sorted(
+    (WhatIf(label, round(p - mean, 2)) for label, p in zip(labels, preds)),
+    key=lambda w: w.delta, reverse=True,
+)
 ```
 
 ### The listing: Gemma 3, grounded on the number
 
 A local [**Gemma 3**](https://ai.google.dev/gemma) model (open-weight, served by
 [Ollama](https://ollama.com)) turns the item and that *exact* predicted price into a title,
-description, and tags. It is **told** the price and told never to invent a different one, the
-number is always TabPFN's, Gemma just writes the copy around it.
+description, and tags. It is **told** the price and told never to invent a different one. The
+number is always TabPFN's. Gemma just writes the copy around it.
 
 ### The safety net
 
