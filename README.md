@@ -12,7 +12,7 @@
 
 <br/>
 
-<img src="docs/banner.png" alt="PricePilot, a local pricing copilot for marketplace sellers, powered by TabPFN-v2 and Gemma 3" width="100%"/>
+<img src="https://raw.githubusercontent.com/simplynadaf/pricepilot/main/docs/banner.png" alt="PricePilot, a local pricing copilot for marketplace sellers, powered by TabPFN-v2 and Gemma 3" width="100%"/>
 
 <br/>
 
@@ -136,7 +136,7 @@ python scripts/validate.py        # end-to-end: API + TabPFN + Gemma + offline f
 ## 🧠 How It Works: two open models, one job each
 
 <div align="center">
-<img src="docs/screenshots/how.png" alt="Three steps: you describe the item, TabPFN-v2 predicts the price, Gemma writes the listing" width="100%"/>
+<img src="https://raw.githubusercontent.com/simplynadaf/pricepilot/main/docs/screenshots/how.png" alt="Three steps: you describe the item, TabPFN-v2 predicts the price, Gemma writes the listing" width="100%"/>
 </div>
 
 ```
