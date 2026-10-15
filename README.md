@@ -1,5 +1,7 @@
 # PricePilot
 
+![PricePilot: price it right, then watch it sell](docs/banner.png)
+
 A local pricing copilot for independent marketplace sellers. An open-weight tabular model
 (**TabPFN-v2**) predicts what a handmade or resale item will sell for from your own
 sold-listings data, and a local language model (**Gemma 3** via Ollama) writes the listing.
@@ -8,6 +10,15 @@ leaves your laptop.
 
 - **Live demo:** https://simplynadaf.github.io/pricepilot/
 - Built for the Hacktoberfest Open-Source AI Challenge 2026, Week 2: Side Hustle.
+
+## Screenshots
+
+Predicted price with its 10–90% range, a measured error, the ranked what-if levers, and a
+drafted listing:
+
+![PricePilot result](docs/screenshots/result.png)
+
+![How it works](docs/screenshots/how.png)
 
 ## How it works
 

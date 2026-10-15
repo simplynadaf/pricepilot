@@ -6,6 +6,9 @@ __pycache__/
 node_modules/
 docs/demo.webm
 
-# non-code assets (article, video, metadata, screenshots) live in S3, not the repo
+# non-code assets live in S3, not the repo (article, video, metadata, recorder).
+# Screenshots + banner ARE kept in the repo as proof (allow-listed below).
 _internal/
-docs/
+docs/*
+!docs/screenshots/
+!docs/banner.png
