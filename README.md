@@ -5,6 +5,7 @@
 ### Price It Right, Then Watch It Sell
 
 [![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge&logo=github)](https://simplynadaf.github.io/pricepilot)
+[![YouTube](https://img.shields.io/badge/Watch-Demo-red?style=for-the-badge&logo=youtube)](https://youtu.be/CDzDQkIPkDA)
 [![Dev.to](https://img.shields.io/badge/Read-Article-0A0A0A?style=for-the-badge&logo=devdotto)](https://dev.to/sarvar_04)
 [![TabPFN](https://img.shields.io/badge/Prices%20with-TabPFN--v2-4ade8a?style=for-the-badge)](https://github.com/PriorLabs/TabPFN)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
@@ -21,7 +22,7 @@ I built an open-weight model that prices it from data, on your own laptop.
 
 <br/>
 
-[Live Preview →](https://simplynadaf.github.io/pricepilot) &nbsp;|&nbsp; [Read Article →](https://dev.to/sarvar_04) &nbsp;|&nbsp; [How It Works →](#-how-it-works-two-open-models-one-job-each)
+[Live Preview →](https://simplynadaf.github.io/pricepilot) &nbsp;|&nbsp; [Watch Demo →](https://youtu.be/CDzDQkIPkDA) &nbsp;|&nbsp; [Read Article →](https://dev.to/sarvar_04) &nbsp;|&nbsp; [How It Works →](#-how-it-works-two-open-models-one-job-each)
 
 </div>
 
@@ -31,9 +32,9 @@ I built an open-weight model that prices it from data, on your own laptop.
 
 <div align="center">
 
-<img src="docs/screenshots/result.png" alt="PricePilot result: a predicted sell price with its range, a measured error, ranked what-if levers, and a draft listing" width="100%"/>
+[![Watch the PricePilot demo on YouTube](https://img.youtube.com/vi/CDzDQkIPkDA/maxresdefault.jpg)](https://youtu.be/CDzDQkIPkDA)
 
-*Three real seller use cases (pendant, candle, leather wallet). Every input changes the price, because the model is predicting, not looking up a table. [Try the live demo →](https://simplynadaf.github.io/pricepilot/)*
+*Three real seller use cases (pendant, candle, leather wallet). Every input changes the price, because the model is predicting, not looking up a table. [Watch on YouTube →](https://youtu.be/CDzDQkIPkDA) · [Try the live demo →](https://simplynadaf.github.io/pricepilot/)*
 
 </div>
 
