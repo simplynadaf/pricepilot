@@ -137,7 +137,17 @@ A frost date, a race time, a candle price: the pattern that keeps winning this H
 is the same. **A small, open model, running where your data already lives, beats a big closed
 one you have to pay and trust.**
 
-## Would Someone Pay For It?
+## My Agent Session
+
+I built PricePilot with an AI coding agent, and the honest story of the build is that the two
+hard problems were both about *trust in the numbers*, not wiring. First, TabPFN on CPU was
+slow enough to feel broken until I batched every what-if scenario into a single forward pass
+(the per-request time dropped from minutes to seconds). Second, I had to stop the language
+model from ever emitting its own price, so the agent and I settled on a rule the whole design
+now rests on: Gemma is *told* the number and never produces one. The repo's commit history
+tracks that path from a bare TabPFN spike to the batched prediction agent.
+
+## My First User
 
 I built PricePilot for a real person: a friend who runs a small candle shop on Etsy and
 genuinely prices by "vibes." I have not sat her down with the finished build yet (that is my
