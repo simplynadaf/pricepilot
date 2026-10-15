@@ -9,7 +9,7 @@ This is a TEACHING dataset: prices are generated from documented, realistic driv
 (category base price, materials, size, make-time, condition, seller rating, photo count,
 season) plus noise, so the feature->price relationships are real and learnable by a
 tabular model, without scraping any marketplace. A seller swaps in their own exported
-sales CSV to make it theirs — that is the whole point of the open approach.
+sales CSV to make it theirs, that is the whole point of the open approach.
 
 Columns written to data/sold_listings.csv:
     category_id, material_id, size_score, make_hours, condition_score,

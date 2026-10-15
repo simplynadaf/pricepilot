@@ -4,7 +4,7 @@ This is more than a single `.predict()` call. Prior Labs favors TabPFN used *ins
 wider prediction agent*, so this module:
 
   1. Predicts the sell price for a listing from a sold-listings CSV, in one CPU forward
-     pass (no per-dataset training — that is the TabPFN foundation-model property).
+     pass (no per-dataset training, that is the TabPFN foundation-model property).
   2. Returns a calibrated 10-90% price RANGE from TabPFN's output quantiles, so the
      seller sees risk, not false precision.
   3. Runs a small WHAT-IF agent loop: it re-queries TabPFN under single-feature changes

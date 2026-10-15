@@ -24,7 +24,7 @@ def check(name, cond, detail=""):
     mark = "PASS" if cond else "FAIL"
     if not cond:
         fails += 1
-    print(f"[{mark}] {name}{(' — ' + detail) if detail else ''}")
+    print(f"[{mark}] {name}{(' - ' + detail) if detail else ''}")
 
 
 # 1) health

@@ -1,4 +1,4 @@
-# PricePilot — SEO Title Research + YouTube Metadata (Week 2)
+# PricePilot - SEO Title Research + YouTube Metadata (Week 2)
 
 ## SEO research (word-by-word intent)
 
@@ -25,7 +25,7 @@ narratives), under ~70 chars for the article, punchy for YouTube.
 
 ---
 
-## ARTICLE TITLE (dev.to) — chosen
+## ARTICLE TITLE (dev.to) - chosen
 
 **"My friend prices her Etsy candles by vibes. I built an open-weight model that prices them from data, on her laptop."**
 
@@ -40,7 +40,7 @@ Tags: devchallenge, hf26challenge, tabpfn, opensource
 
 ---
 
-## YOUTUBE TITLE — chosen (front-loaded keyword + payoff + freshness, <70 chars)
+## YOUTUBE TITLE - chosen (front-loaded keyword + payoff + freshness, <70 chars)
 
 **"I Built an Offline AI That Prices Your Etsy Shop (No API, 2026)"**  (60 chars)
 
