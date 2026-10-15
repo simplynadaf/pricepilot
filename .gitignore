@@ -5,3 +5,7 @@ __pycache__/
 *.egg-info/
 node_modules/
 docs/demo.webm
+
+# non-code assets (article, video, metadata, screenshots) live in S3, not the repo
+_internal/
+docs/
