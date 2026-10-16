@@ -6,7 +6,7 @@
 
 [![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge&logo=github)](https://simplynadaf.github.io/pricepilot)
 [![YouTube](https://img.shields.io/badge/Watch-Demo-red?style=for-the-badge&logo=youtube)](https://youtu.be/CDzDQkIPkDA)
-[![Dev.to](https://img.shields.io/badge/Read-Article-0A0A0A?style=for-the-badge&logo=devdotto)](https://dev.to/sarvar_04)
+[![Dev.to](https://img.shields.io/badge/Read-Article-0A0A0A?style=for-the-badge&logo=devdotto)](https://dev.to/sarvar_04/i-built-an-open-weight-ai-that-prices-etsy-shops-on-your-laptop-24dk)
 [![TabPFN](https://img.shields.io/badge/Prices%20with-TabPFN--v2-4ade8a?style=for-the-badge)](https://github.com/PriorLabs/TabPFN)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
 
@@ -22,7 +22,7 @@ I built an open-weight model that prices it from data, on your own laptop.
 
 <br/>
 
-[Live Preview →](https://simplynadaf.github.io/pricepilot) &nbsp;|&nbsp; [Watch Demo →](https://youtu.be/CDzDQkIPkDA) &nbsp;|&nbsp; [Read Article →](https://dev.to/sarvar_04) &nbsp;|&nbsp; [How It Works →](#-how-it-works-two-open-models-one-job-each)
+[Live Preview →](https://simplynadaf.github.io/pricepilot) &nbsp;|&nbsp; [Watch Demo →](https://youtu.be/CDzDQkIPkDA) &nbsp;|&nbsp; [Read Article →](https://dev.to/sarvar_04/i-built-an-open-weight-ai-that-prices-etsy-shops-on-your-laptop-24dk) &nbsp;|&nbsp; [How It Works →](#-how-it-works-two-open-models-one-job-each)
 
 </div>
 
